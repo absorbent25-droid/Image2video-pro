@@ -1,8 +1,12 @@
-import { ReactNode } from "react";
+import React from "react";
 
-export default function Card({ children }: { children: ReactNode }) {
+type CardProps = {
+  children: React.ReactNode;
+};
+
+export function Card({ children }: CardProps) {
   return (
-    <div className="p-6 bg-white rounded-2xl shadow-md w-full max-w-md">
+    <div className="p-4 bg-white shadow-md rounded-xl border">
       {children}
     </div>
   );
